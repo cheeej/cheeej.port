@@ -354,12 +354,12 @@ legend {
 }
 @media screen and (max-width: 800px) {
   #tab-intro {
-    height: 230vh;
+    height: 300vh;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 390px) {
   #tab-intro {
-    height: 280vh;
+    height: 340vh;
   }
 }
 #tab-intro .intro-container {
@@ -461,6 +461,11 @@ legend {
     padding: 35px 0;
   }
 }
+@media screen and (max-width: 428px) {
+  #tab-intro .skill-container .skill-wrap {
+    align-items: center;
+  }
+}
 #tab-intro .skill-container .skill-wrap:nth-child(3) {
   border-bottom: none;
 }
@@ -507,8 +512,19 @@ legend {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  #tab-intro .skill-container .skill ul li {
+    align-items: baseline;
+    justify-content: center;
+  }
+}
 #tab-intro .skill-container .skill ul li ul {
   display: flex;
+}
+@media screen and (max-width: 1024px) {
+  #tab-intro .skill-container .skill ul li ul {
+    flex-direction: column;
+  }
 }
 #tab-intro .skill-container .skill ul li ul li {
   font-size: 12px;
@@ -558,6 +574,14 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+  word-break: break-all;
+}
+@media screen and (max-width: 428px) {
+  ul,
+  li {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .nav {
@@ -893,6 +917,11 @@ h2 {
     height: 210vh;
     flex-wrap: nowrap;
     align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .gallery-wrap {
+    height: 160vh;
   }
 }
 

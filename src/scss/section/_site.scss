@@ -40,9 +40,14 @@
 
 ul,
 li {
+  @media screen and (max-width: 428px) {
+    display: flex;
+    flex-direction: column;
+  }
   list-style: none;
   padding: 0;
   margin: 0;
+  word-break: break-all;
 }
 
 .nav {

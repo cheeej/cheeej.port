@@ -570,7 +570,7 @@ legend {
 }
 
 #tab-site {
-  height: 300vh;
+  height: 320vh;
   max-width: 90%;
   margin: 0 auto 200px;
   display: flex;
@@ -578,10 +578,15 @@ legend {
   justify-content: flex-start;
   overflow: hidden;
 }
+@media (max-width: 1440px) {
+  #tab-site {
+    height: 300vh;
+  }
+}
 @media (max-width: 1024px) {
   #tab-site {
     margin-top: 5vh;
-    height: 440vh;
+    height: 430vh;
   }
 }
 @media (max-width: 800px) {
@@ -622,7 +627,12 @@ a {
   width: 100%;
   height: 70vh;
   border-radius: 20px;
-  margin-bottom: 350px;
+  margin-bottom: 400px;
+}
+@media (max-width: 1440px) {
+  .site-wrap .siteport {
+    margin-bottom: 300px;
+  }
 }
 @media (max-width: 1024px) {
   .site-wrap .siteport {

@@ -1,7 +1,10 @@
 #tab-site {
+  @media (max-width: 1440px) {
+    height: 300vh;
+  }
   @media (max-width: 1024px) {
     margin-top: 5vh;
-    height: 440vh;
+    height: 430vh;
   }
   @media (max-width: 800px) {
     height: 380vh;
@@ -16,7 +19,7 @@
   // @media (max-width: 528px) {
   //   height: 160vh;
   // }
-  height: 300vh;
+  height: 320vh;
   max-width: 90%;
   margin: 0 auto 200px;
   // margin-bottom: 300px;
@@ -42,9 +45,9 @@ a {
     background: #333;
   }
   .siteport {
-    // @media (max-width: 1440px) {
-    //   height: 65vh;
-    // }
+    @media (max-width: 1440px) {
+      margin-bottom: 300px;
+    }
     @media (max-width: 1024px) {
       height: 130vh;
       margin-bottom: 150px;
@@ -63,7 +66,7 @@ a {
     width: 100%;
     height: 70vh;
     border-radius: 20px;
-    margin-bottom: 350px;
+    margin-bottom: 400px;
 
     .site-title {
       @media (max-width: 1028px) {

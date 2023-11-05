@@ -1,84 +1,90 @@
 #tab-portfolio {
   height: 100%;
-  max-width: 100rem;
-
+  max-width: 200rem;
   margin: 0 auto;
+  position: relative;
+
   // padding: 0 -2rem -2rem;
-}
-h1 {
-  font-size: 4vw;
-}
-.galley {
-  // @media screen and (max-width: 1024px) {
-  //   display: grid;
-  //   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  //   grid-gap: 2rem;
-  //   flex-direction: column;
-  //   padding: 100px 0;
-  //   margin: -1rem -1rem;
-  //   img {
-  //     width: 100%;
-  //   }
+  @import url("https://fonts.googleapis.com/css?family=Cardo:700");
+
+  // h1 {
+  //   font-size: 20vw;
   // }
-  padding: 100px 50px;
-  display: flex;
-  align-content: stretch;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start; // margin: -1rem -1rem;
-  .galley-item {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: auto;
-    // margin: 1rem;
+
+  // infinite text
+  .title {
+    // position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
     overflow: hidden;
-    // box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    margin-bottom: 200px;
+    height: 20vh;
+    h2 {
+      font-size: 5vw;
+      white-space: nowrap;
+      opacity: 0.85;
+      line-height: 10vh;
+      animation: marquee 10s linear infinite;
+    }
+    // z-index: 10;
+  }
 
-    img {
-      display: block;
-      width: 90%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 400ms ease-out;
-      margin-bottom: 20px;
-      box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-      &:hover {
-        transform: scale(0.9);
-      }
+  @keyframes marquee {
+    0% {
+      transform: translate(0%, 0);
     }
-    span {
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-    .g-banner {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      img {
-        margin-bottom: 20px;
-      }
+    100% {
+      transform: translate(-141.5vw, 0);
     }
   }
 }
 
-@supports (display: grid) {
-  .galley {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    grid-gap: 2rem;
-    justify-items: center;
-    .galley,
-    .galley-item {
-      margin: 0;
+// slide banner
+.slide-banner {
+  width: 100%;
+  max-width: 100rem;
+  overflow: hidden;
+  img {
+    width: 1200px;
+    height: 400px;
+    object-fit: cover;
+    animation: scroll 60s linear infinite;
+  }
+
+  .slide-track {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .slider {
+    margin-top: 70px;
+    background-color: whitesmoke;
+    padding: 8em 2em;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translatex(-1000%);
     }
   }
 }
+
+/* div {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  background: gray;
+} */
 
 //
 //
@@ -94,19 +100,19 @@ h1 {
     // margin-bottom: 100px;
   }
 
-  position: relative;
-  padding: 75px 0;
+  // position: relative;
+  padding: 200px 0;
   margin: 0 auto;
   width: 1140px;
   height: 100%;
 }
 
 h2 {
-  margin-bottom: 45px;
-  // font-family: "Oswald", sans-serif;
-  font-size: 35px;
+  font-size: 4vw;
+  color: #4e4e4e;
+  padding: 25px 0;
   text-transform: uppercase;
-  color: #757575;
+  // color: #757575;
 }
 .gallery-wrap {
   @media screen and (max-width: 800px) {

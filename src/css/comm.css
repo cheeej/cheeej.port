@@ -570,9 +570,9 @@ legend {
 }
 
 #tab-site {
-  height: 320vh;
+  height: 330vh;
   max-width: 90%;
-  margin: 0 auto 200px;
+  margin: 0 auto 150px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -580,7 +580,8 @@ legend {
 }
 @media (max-width: 1440px) {
   #tab-site {
-    height: 300vh;
+    height: 305vh;
+    margin: 0 auto 150px;
   }
 }
 @media (max-width: 1024px) {
@@ -592,6 +593,7 @@ legend {
 @media (max-width: 800px) {
   #tab-site {
     height: 380vh;
+    margin: 0 auto 80px;
   }
 }
 @media (max-width: 528px) {
@@ -620,12 +622,15 @@ a {
 .site-wrap .siteport-2 {
   background: #4a4a4a;
 }
+.site-wrap .siteport-2 .site-title {
+  padding: 65px 30px;
+}
 .site-wrap .siteport-3 {
   background: #333;
 }
 .site-wrap .siteport {
   width: 100%;
-  height: 70vh;
+  height: 73vh;
   border-radius: 20px;
   margin-bottom: 400px;
 }
@@ -690,7 +695,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap: 15px;
 }
 @media (max-width: 1024px) {
   .site-wrap .siteport .site-contents {
@@ -735,7 +740,7 @@ a {
   object-fit: cover;
   object-position: top;
   transform: translateY(0);
-  transition: 2s ease-out;
+  transition: 3s ease-out;
 }
 .site-wrap .siteport .site-contents .site-view .site-img img:hover {
   height: auto;
@@ -756,7 +761,7 @@ a {
 }
 .site-wrap .siteport .site-contents .site-text {
   word-break: keep-all;
-  padding: 130px 50px;
+  padding: 100px 30px;
 }
 @media (max-width: 1028px) {
   .site-wrap .siteport .site-contents .site-text {
@@ -882,75 +887,79 @@ a {
 
 #tab-portfolio {
   height: 100%;
-  max-width: 100rem;
+  max-width: 200rem;
   margin: 0 auto;
+  position: relative;
+  @import url("https://fonts.googleapis.com/css?family=Cardo:700");
+}
+#tab-portfolio .title {
+  width: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
+  margin-bottom: 200px;
+  height: 20vh;
+}
+#tab-portfolio .title h2 {
+  font-size: 5vw;
+  white-space: nowrap;
+  opacity: 0.85;
+  line-height: 10vh;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0%, 0);
+  }
+  100% {
+    transform: translate(-141.5vw, 0);
+  }
 }
 
-h1 {
-  font-size: 4vw;
-}
-
-.galley {
-  padding: 100px 50px;
-  display: flex;
-  align-content: stretch;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-.galley .galley-item {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: auto;
+.slide-banner {
+  width: 100%;
+  max-width: 100rem;
   overflow: hidden;
 }
-.galley .galley-item img {
-  display: block;
-  width: 90%;
-  height: 100%;
+.slide-banner img {
+  width: 1200px;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 400ms ease-out;
-  margin-bottom: 20px;
-  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  animation: scroll 60s linear infinite;
 }
-.galley .galley-item img:hover {
-  transform: scale(0.9);
-}
-.galley .galley-item span {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-.galley .galley-item .g-banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.slide-banner .slide-track {
   width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+  margin: 0 auto;
 }
-.galley .galley-item .g-banner img {
-  margin-bottom: 20px;
+.slide-banner .slider {
+  margin-top: 70px;
+  background-color: whitesmoke;
+  padding: 8em 2em;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
 }
 
-@supports (display: grid) {
-  .galley {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    grid-gap: 2rem;
-    justify-items: center;
-  }
-  .galley .galley,
-  .galley .galley-item {
-    margin: 0;
-  }
-}
+/* div {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  background: gray;
+} */
 .g-container {
-  position: relative;
-  padding: 75px 0;
+  padding: 200px 0;
   margin: 0 auto;
   width: 1140px;
   height: 100%;
@@ -966,10 +975,10 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 45px;
-  font-size: 35px;
+  font-size: 4vw;
+  color: #4e4e4e;
+  padding: 25px 0;
   text-transform: uppercase;
-  color: #757575;
 }
 
 .gallery-wrap {
@@ -1109,8 +1118,6 @@ textarea {
 /* Location, Phone, Email Section */
 .contact-list {
   list-style-type: none;
-  margin-left: 22px;
-  padding-right: 20px;
   text-align: start;
 }
 

@@ -42,52 +42,131 @@
 }
 
 // slide banner
-.slide-banner {
-  width: 100%;
-  max-width: 100rem;
-  overflow: hidden;
-  img {
-    width: 1200px;
-    height: 400px;
-    object-fit: cover;
-    animation: scroll 60s linear infinite;
-  }
+// .slide-banner {
+//   width: 100%;
+//   max-width: 100rem;
+//   overflow: hidden;
+//   img {
+//     width: 1200px;
+//     height: 400px;
+//     object-fit: cover;
+//     animation: scroll 60s linear infinite;
+//   }
 
-  .slide-track {
-    width: 100%;
-    display: flex;
-    gap: 3em;
-    overflow: hidden;
-    margin: 0 auto;
-  }
+//   .slide-track {
+//     width: 100%;
+//     display: flex;
+//     gap: 3em;
+//     overflow: hidden;
+//     margin: 0 auto;
+//   }
+
+//   .slider {
+//     margin-top: 70px;
+//     background-color: whitesmoke;
+//     padding: 8em 2em;
+//   }
+
+//   @keyframes scroll {
+//     0% {
+//       transform: translateX(0);
+//     }
+//     100% {
+//       transform: translatex(-1000%);
+//     }
+//   }
+// }
+
+// banner-container
+.banner-container {
+  width: 80%;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0 auto;
 
   .slider {
-    margin-top: 70px;
-    background-color: whitesmoke;
-    padding: 8em 2em;
+    width: 500%;
+    position: relative;
+    animation: animate 10s linear infinite;
   }
+  .slide {
+    width: 20%;
+    position: relative;
+    float: left;
+    height: 50vh;
+    background-size: cover;
+    overflow: hidden;
 
-  @keyframes scroll {
+    img {
+      width: 100%;
+      height: 50vh;
+      object-fit: contain;
+    }
+  }
+  // h1 {
+  //   margin: 0;
+  //   padding: 0;
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   text-align: center;
+  //   font-size: 6em;
+  //   width: 100%;
+  //   background: rgba(0, 0, 0, 0.6);
+  //   color: #fff;
+  // }
+  // .slide:nth-child(1) {
+  //   background: url(../../image/banner/bnr-1.jpg) no-repeat center center;
+  // }
+  // .slide:nth-child(2) {
+  //   background: url(../../image/banner/bnr-2.png) no-repeat center center;
+  // }
+  // .slide:nth-child(3) {
+  //   background: url(../../image/banner/bnr-3.jpg) no-repeat center center;
+  // }
+  // .slide:nth-child(4) {
+  //   background: url(../../image/banner/bnr-4.png) no-repeat center center;
+  // }
+  // .slide:nth-child(5) {
+  //   background: url(../../image/banner/bnr-5.jpg) no-repeat center center;
+  // }
+  @keyframes animate {
     0% {
-      transform: translateX(0);
+      left: 0;
+    }
+    16% {
+      left: 0;
+    }
+    20% {
+      left: -100%;
+    }
+    36% {
+      left: -100%;
+    }
+    40% {
+      left: -200%;
+    }
+    56% {
+      left: -200%;
+    }
+    60% {
+      left: -300%;
+    }
+    76% {
+      left: -300%;
+    }
+    80% {
+      left: -400%;
+    }
+    96% {
+      left: -400%;
     }
     100% {
-      transform: translatex(-1000%);
+      left: 0;
     }
   }
 }
 
-/* div {
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  right: 0;
-  bottom: 0;
-  background: gray;
-} */
-
-//
-//
 // container
 
 .g-container {
